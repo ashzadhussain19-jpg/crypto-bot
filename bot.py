@@ -84,10 +84,4 @@ if "result" in res and len(res["result"]) > 0:
     fig.add_trace(go.Scatter(x=df['time'], y=df['EMA_50'], line=dict(color='orange', width=1), name="EMA 50"))
     fig.add_trace(go.Scatter(x=df['time'], y=df['EMA_200'], line=dict(color='purple', width=2), name="EMA 200 Trend"))
     fig.add_trace(go.Scatter(x=df['time'], y=df['BBU'], line=dict(color='gray', width=1, dash='dash'), name="Upper BB"))
-    fig.add_trace(go.Scatter(x=df['time'], y=df['BBL'], line=dict(color='gray', width=1, dash='dash'), name="Lower BB"))
-
-    fig.update_layout(template="plotly_dark", height=600, title=f"Technical Chart - {symbol} ({timeframe})")
-    st.plotly_chart(fig, use_container_width=True)
-
-else:
-    st.error("API response error. Please try again in a few seconds.")
+    fig.add_trace(go.Scatter(x=df['time'], y=df['BBL'], line=dict(color='gray', width=1, dash='dash
